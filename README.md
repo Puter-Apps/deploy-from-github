@@ -2,11 +2,13 @@
   <a href="https://puter.com/app/github-quick-deploy" target="_blank">Simple GitHub Deployer</a>
 </h1>
 
+<p align="center">A simple web application that allows you to instantly deploy simple GitHub repositories to Puter hosting with just a few clicks.
+</p>
+
 <p align="center">
   <img src="screenshot.png" alt="Screenshot" width="600" />
 </p>
 
-A simple web application that allows you to instantly deploy any GitHub repository to Puter hosting with just a few clicks.
 
 ## Features
 
@@ -22,13 +24,13 @@ A simple web application that allows you to instantly deploy any GitHub reposito
 1. Enter the URL of any GitHub repository
 2. Click "Deploy Repository" and authenticate with your Puter account
 3. The app automatically downloads all files from the repository
-4. Files are stored in your Puter drive and hosted on a unique subdomain
+4. Files are stored in your Puter account and hosted on a unique subdomain
 5. Access your live site immediately with the provided URL
 
 ## Technical Details
 
 This application uses:
-- **Puter SDK** for authentication, file system operations, and web hosting
+- **Puter.js** for authentication, file system operations, and web hosting
 - **GitHub API** to fetch repository content
 - **Vanilla JavaScript** for the frontend logic
 - **Modern CSS** with responsive design principles
