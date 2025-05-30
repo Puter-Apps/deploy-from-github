@@ -6,7 +6,7 @@
   <img src="screenshot.png" alt="Screenshot" width="600" />
 </p>
 
-A modern web application that allows you to instantly deploy any GitHub repository to Puter hosting with just a few clicks.
+A simple web application that allows you to instantly deploy any GitHub repository to Puter hosting with just a few clicks.
 
 ## Features
 
