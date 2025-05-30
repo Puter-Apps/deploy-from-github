@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple GitHub Deployer</title>
+    <script src="https://js.puter.com/v2/"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- History button as small icon in corner -->
+        <button type="button" class="history-icon-btn" id="historyBtn" title="View Deployment History">
+            📜
+            <span class="count" id="historyCount" style="display: none;"></span>
+        </button>
+
+        <div class="header">
+            <h1><span class="icon">🚀</span> Simple Deployer</h1>
+            <p>Deploy any GitHub repository to Puter hosting instantly</p>
+        </div>
+
+        <div id="status" class="status-bar"></div>
+
+        <form id="deployForm">
+            <div class="form-group">
+                <label for="repoUrl" class="label">GitHub Repository URL</label>
+                <input type="url" id="repoUrl" class="input" placeholder="https://github.com/user/repo" required>
+            </div>
+
+            <button type="submit" class="btn" id="deployBtn">
+                <span class="icon">🚀</span> Deploy Repository
+            </button>
+        </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <div class="modal-icon">🎉</div>
+                <div class="modal-title">Deployment Successful!</div>
+                <div class="modal-subtitle">Your repository is now live on the web</div>
+            </div>
+            <div class="modal-url">
+                <strong>Your site is live at:</strong>
+                <a href="#" id="siteUrl" target="_blank"></a>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="closeModal()">Close</button>
+                <button class="modal-btn primary" id="visitSiteBtn">Visit Site</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div id="historyModalOverlay" class="modal-overlay history-modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeHistoryModal()">×</button>
+            <div class="modal-header">
+                <div class="modal-icon">📜</div>
+                <div class="modal-title">Deployment History</div>
+                <div class="modal-subtitle">Your previous deployments</div>
+            </div>
+            <div id="historyList" class="history-list">
+                <!-- History items will be populated here -->
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn secondary" onclick="clearHistory()">Clear History</button>
+                <button class="modal-btn primary" onclick="closeHistoryModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
