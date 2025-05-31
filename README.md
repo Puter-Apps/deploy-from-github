@@ -28,13 +28,13 @@ A simple web application that allows you to instantly deploy any GitHub reposito
 ## Technical Details
 
 This application uses:
-- **Puter SDK** for authentication, file system operations, and web hosting
+- **Puter.js** for authentication, file system operations, and web hosting
 - **GitHub API** to fetch repository content
 - **Vanilla JavaScript** for the frontend logic
 - **Modern CSS** with responsive design principles
 - **Key-Value Storage** for saving deployment history
 
-## Puter SDK Features Used
+## Puter.js Features Used
 
 - **Authentication**: User sign-in and account management
 - **File System**: Creating directories and writing files
