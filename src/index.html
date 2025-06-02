@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- History button as small icon in corner -->
         <button type="button" class="history-icon-btn" id="historyBtn" title="View Deployment History">
             📜
             <span class="count" id="historyCount" style="display: none;"></span>
@@ -34,14 +33,13 @@
         </form>
     </div>
 
-    <!-- Success Modal -->
     <div id="modalOverlay" class="modal-overlay">
         <div class="modal">
             <button class="modal-close" onclick="closeModal()">×</button>
             <div class="modal-header">
                 <div class="modal-icon">🎉</div>
                 <div class="modal-title">Deployment Successful!</div>
-                <div class="modal-subtitle">Your repository is now live on the web</div>
+                <div class="modal-subtitle" id="modalSubtitle">Your repository is now live on the web</div>
             </div>
             <div class="modal-url">
                 <strong>Your site is live at:</strong>
@@ -54,7 +52,6 @@
         </div>
     </div>
 
-    <!-- History Modal -->
     <div id="historyModalOverlay" class="modal-overlay history-modal">
         <div class="modal">
             <button class="modal-close" onclick="closeHistoryModal()">×</button>
