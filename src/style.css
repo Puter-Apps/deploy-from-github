@@ -88,7 +88,8 @@ body {
 }
 
 .header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
 .header h1 {
@@ -108,8 +109,34 @@ body {
 
 .header p {
     color: var(--color-text-secondary);
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.github-link-top-right {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--color-text-secondary);
+    padding: 6px 10px;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+}
+
+.github-link-top-right:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary-500);
+}
+
+.github-link-top-right svg {
+    fill: currentColor;
 }
 
 .form-group {
